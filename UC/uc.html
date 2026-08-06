@@ -5,7 +5,7 @@
     <!-- Meta Tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UC Purchasing - Secure Platform</title>
+    <title>We Play Coin Purchasing - Secure Platform</title>
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&display=swap" rel="stylesheet">
     <!-- Bootstrap CSS CDN -->
@@ -18,7 +18,7 @@
   <!-- Meta Tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UC Purchasing - Secure Platform</title>
+    <title>We Play Coin - Secure Platform</title>
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&display=swap" rel="stylesheet">
     <!-- Bootstrap CSS CDN -->
@@ -443,7 +443,7 @@
             padding: 60px 0;
         }
 
-        /* Changed the heading to "UC sending failed..." */
+        /* Changed the heading to "Coin sending failed..." */
         .error-section h3 {
             font-size: 1.5rem;
             margin-top: 20px;
@@ -613,25 +613,14 @@
 <body>
 
  
-    <div id="password-section" style="text-align:center; margin-top:50px;">
-        <h2>Enter Password to Access</h2>
-        <div class="container" style="max-width: 300px;">
-            <input type="password" id="passwordInput" class="form-control mb-2" placeholder="Enter password">
-            <button onclick="checkPassword()" class="btn btn-primary btn-block">Login</button>
-            <p id="passwordError" style="color:red; display:none; margin-top:10px;">Invalid password, please try again.</p>
-        </div>
-    </div>
-    <!-- ======================= END PASSWORD SECTION ======================= -->
-
-    <!-- Hide ALL original content until password is correct -->
-    <div id="mainContent" style="display:none;">
+    
 
         <!-- ======================= ORIGINAL CONTENT STARTS HERE ======================= -->
 
         <!-- Navbar -->
         <nav class="navbar navbar-expand-lg navbar-dark">
             <div class="container">
-                <a class="navbar-brand" href="#"><i class="bi bi-bag-check"></i> UC Purchasing</a>
+                <a class="navbar-brand" href="#"><i class="bi bi-bag-check"></i> Coin Purchasing</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -641,10 +630,10 @@
         <!-- Hero Section -->
         <section class="hero-section section active" id="hero-section">
             <div class="container">
-                <h1>Welcome to UC Purchasing</h1>
+                <h1>Welcome to We Play Coin Purchasing</h1>
                 <p>Secure and efficient purchasing for your gaming needs</p>
                 <p class="hero-description">
-                    Our platform offers the best UC packages for PUBG and BGMI players with seamless transactions and instant
+                    Our platform offers the best Coin packages for Weplay  players with seamless transactions and instant
                     delivery.
                 </p>
                 <div class="verified-badge"><i class="bi bi-shield-check"></i> Verified by Dark-Web</div>
@@ -663,10 +652,11 @@
         <!-- Product Section -->
         <section class="product-section section" id="product-section">
             <div class="container">
-                <h3 class="text-center mb-4" style="color: #ffd700;">Choose Your UC Package</h3>
-                <div class="verified-uc-badge"><i class="bi bi-shield-check"></i> Verified by Dark-Web</div>
+                <h3 class="text-center mb-4" style="color: #ffd700;">Choose Your Coin 
+                Package</h3>
+                <div class="verified-coin-badge"><i class="bi bi-shield-check"></i> Verified by Dark-Web</div>
                 <!-- Player ID Input Field -->
-                <div class="pubg-id-container">
+                <div class="we play-id-container">
                     <div class="form-group">
                         <label for="player-id"><i class="bi bi-person-fill"></i> Enter your Player ID:</label>
                         <input type="text" class="form-control" id="player-id" placeholder="Enter Player ID">
@@ -683,7 +673,7 @@
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title"><i class="material-icons">shopping_cart</i> Your Cart</h5>
-                        <p id="cart-product-name">Product: PUBG UC - 6000</p>
+                        <p id="cart-product-name">Product: We Play Coin  - 10000</p>
                         <p id="cart-product-price">Price: $99.99</p>
                         <a href="#" class="btn btn-primary" onclick="proceedToPayment()"><i
                                 class="bi bi-credit-card"></i> Proceed to Payment</a>
@@ -698,7 +688,7 @@
                 <div class="row">
                     <!-- Left Column: Payment Cards -->
                     <div class="col-md-6">
-                        <!-- Selected UC Bundle with Logo -->
+                        <!-- Selected Coin Bundle with Logo -->
                         <div class="selected-bundle mb-3">
                             <h5><i class="material-icons">local_offer</i> Selected Bundle:</h5>
                             <div class="d-flex align-items-center">
@@ -760,7 +750,7 @@
                         <span class="processing-step"><i class="bi bi-person-check"></i> Getting user info...</span>
                         <span class="processing-step"><i class="bi bi-file-earmark-check"></i> Verifying merchant
                             info...</span>
-                        <span class="processing-step"><i class="bi bi-currency-exchange"></i> Adding UC...</span>
+                        <span class="processing-step"><i class="bi bi-currency-exchange"></i> Adding Coins...</span>
                         <span class="processing-step"><i class="bi bi-hourglass-split"></i> Finishing up...</span>
                         <span class="processing-step"><i class="bi bi-check-circle"></i> Payment Success!</span>
                     </div>
@@ -807,7 +797,8 @@
                     </div>
                     <div class="receipt-detail">
                         <strong>Contact Support:</strong>
-                        <a href="mailto:support@ucpurchasing.com">support@ucpurchasing.com</a>
+                        <a href="mailto:support@uc
+                    purchasing.com">support@ucpurchasing.com</a>
                     </div>
                 </div>
                 <hr>
@@ -892,21 +883,21 @@
     <!-- ========== YOUR EXISTING CUSTOM SCRIPT ========== -->
     <script>
         const products = [
-            { name: "PUBG UC - 300k", image: "https://cdn.midasbuy.com/images/apps/pubgm/1599546071746KqkIhrzG.png", price: 250 * 12.5 },
-            { name: "PUBG UC - 40k", image: "https://cdn.midasbuy.com/images/apps/pubgm/1599546071746KqkIhrzG.png", price: 40 * 12.5 },
-            { name: "PUBG UC - 85k", image: "https://cdn.midasbuy.com/images/apps/pubgm/1599546071746KqkIhrzG.png", price: 85 * 12.5 },
-            { name: "PUBG UC - 105k", image: "https://cdn.midasbuy.com/images/apps/pubgm/1599546071746KqkIhrzG.png", price: 105 * 12.5 },
-            { name: "PUBG UC - 160k", image: "https://cdn.midasbuy.com/images/apps/pubgm/1599546071746KqkIhrzG.png", price: 160 * 12.5 },
-            { name: "PUBG UC - 220k", image: "https://cdn.midasbuy.com/images/apps/pubgm/1599546071746KqkIhrzG.png", price: 220 * 12.5 },
-            { name: "PUBG UC - 350k", image: "https://cdn.midasbuy.com/images/apps/pubgm/1599546071746KqkIhrzG.png", price: 350 * 12.5 },
-            { name: "PUBG UC - 450k", image: "https://cdn.midasbuy.com/images/apps/pubgm/1599546071746KqkIhrzG.png", price: 450 * 12.5 },
-            { name: "PUBG UC - 500k", image: "https://cdn.midasbuy.com/images/apps/pubgm/1599546071746KqkIhrzG.png", price: 500 * 12.5 },
-            { name: "PUBG UC - 600k", image: "https://cdn.midasbuy.com/images/apps/pubgm/1599546071746KqkIhrzG.png", price: 600 * 12.5 },
-            { name: "PUBG UC - 700k", image: "https://cdn.midasbuy.com/images/apps/pubgm/1599546071746KqkIhrzG.png", price: 700 * 12.5 },
-            { name: "PUBG UC - 800k", image: "https://cdn.midasbuy.com/images/apps/pubgm/1599546071746KqkIhrzG.png", price: 800 * 12.5 },
-            { name: "PUBG UC - 1000k", image: "https://cdn.midasbuy.com/images/apps/pubgm/1599546071746KqkIhrzG.png", price: 1000 * 12.5 },
-            { name: "PUBG UC - 1500k", image: "https://cdn.midasbuy.com/images/apps/pubgm/1599546071746KqkIhrzG.png", price: 1500 * 12.5 },
-            { name: "PUBG UC - 2000k", image: "https://cdn.midasbuy.com/images/apps/pubgm/1599546071746KqkIhrzG.png", price: 2000 * 12.5 },
+            { name: "We Play Coin  - 300k", image: "https://share.google/5JouJi0x7c5jnnuqG},
+            { name: "We Play Coin- 40k", image: "https://cdn.midasbuy.com/images/apps/pubgm/1599546071746KqkIhrzG.png", price: 40 * 12.5 },
+            { name: "We Play Coin - 85k", image: "https://cdn.midasbuy.com/images/apps/pubgm/1599546071746KqkIhrzG.png", price: 85 * 12.5 },
+            { name: "We Play Coin - 105k", image: "https://cdn.midasbuy.com/images/apps/pubgm/1599546071746KqkIhrzG.png", price: 105 * 12.5 },
+            { name: "We Play Coin - 160k", image: "https://cdn.midasbuy.com/images/apps/pubgm/1599546071746KqkIhrzG.png", price: 160 * 12.5 },
+            { name: "We Play Coin - 220k", image: "https://cdn.midasbuy.com/images/apps/pubgm/1599546071746KqkIhrzG.png", price: 220 * 12.5 },
+            { name: "We Play Coin - 350k", image: "https://cdn.midasbuy.com/images/apps/pubgm/1599546071746KqkIhrzG.png", price: 350 * 12.5 },
+            { name: "We Play Coin - 450k", image: "https://cdn.midasbuy.com/images/apps/pubgm/1599546071746KqkIhrzG.png", price: 450 * 12.5 },
+            { name: "We Play Coin - 500k", image: "https://cdn.midasbuy.com/images/apps/pubgm/1599546071746KqkIhrzG.png", price: 500 * 12.5 },
+            { name: "We Play Coin - 600k", image: "https://cdn.midasbuy.com/images/apps/pubgm/1599546071746KqkIhrzG.png", price: 600 * 12.5 },
+            { name: "We Play Coin - 700k", image: "https://cdn.midasbuy.com/images/apps/pubgm/1599546071746KqkIhrzG.png", price: 700 * 12.5 },
+            { name: "We Play Coin - 800k", image: "https://cdn.midasbuy.com/images/apps/pubgm/1599546071746KqkIhrzG.png", price: 800 * 12.5 },
+            { name: "We Play Coin - 1000k", image: "https://cdn.midasbuy.com/images/apps/pubgm/1599546071746KqkIhrzG.png", price: 1000 * 12.5 },
+            { name: "We Play Coin - 1500k", image: "https://cdn.midasbuy.com/images/apps/pubgm/1599546071746KqkIhrzG.png", price: 1500 * 12.5 },
+            { name: "We Play Coin - 2000k", image: "https://cdn.midasbuy.com/images/apps/pubgm/1599546071746KqkIhrzG.png", price: 2000 * 12.5 },
             // BGMI Packs
             { name: "BGMI UC - 25k", image: "https://i.pinimg.com/736x/59/0c/a7/590ca77b4d95284a9e16017234f683c5.jpg", price: 25 * 12.5 },
             { name: "BGMI UC - 85k", image: "https://i.pinimg.com/736x/59/0c/a7/590ca77b4d95284a9e16017234f683c5.jpg", price: 85 * 12.5 },{
@@ -979,7 +970,7 @@
             if (productName.startsWith("BGMI")) {
                 selectedType = "BGMI";
             } else {
-                selectedType = "PUBG";
+                selectedType = "We Play";
             }
 
             document.getElementById('cart-product-name').textContent = `Product: ${productName}`;
