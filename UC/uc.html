@@ -1,25 +1,1157 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>UC Purchasing - Secure Platform</title>
-<style>
-    * {margin:0; padding:0; box-sizing:border-box; font-family: Arial, sans-serif;}
-    body {background:#0a0a0a; color:#fff; text-align:center; padding:20px;}
-    .container {max-width:600px; margin:0 auto; background:#111; padding:30px; border-radius:12px; border:1px solid #333;}
-    h1 {color:#ff4500; margin-bottom:20px;}
-    p {color:#aaa; margin-bottom:20px; line-height:1.6;}
-    button {background:#ff4500; color:#fff; border:none; padding:14px 28px; font-size:16px; border-radius:8px; cursor:pointer; margin-top:15px;}
-    button:hover {background:#ff6500;}
-</style>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UC Purchasing - Secure Platform</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWrnQ9JvoRxT2MZw1T"
+        crossorigin="anonymous">
+    <!-- Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+  <!-- Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UC Purchasing - Secure Platform</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWrnQ9JvoRxT2MZw1T"
+        crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Google Sans', sans-serif;
+            background-color: #1e1e2f;
+            color: #ffffff;
+            position: relative;
+            padding-bottom: 80px;
+        }
+
+        .navbar {
+            background: linear-gradient(90deg, #8a2be2 0%, #4b0082 100%);
+            padding: 15px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 2rem;
+            color: #f8f9fa;
+        }
+
+        .btn-primary {
+            position: relative;
+            overflow: hidden;
+            background-color: #ffd700;
+            border-color: #d4a600;
+            color: #1e1e2f;
+            font-weight: 600;
+            font-size: 1.25rem;
+            padding: 10px 20px;
+            border-radius: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-primary::after {
+            content: "";
+            position: absolute;
+            background: rgba(255, 255, 255, 0.5);
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: -100%;
+            transform: skewX(-45deg);
+            transition: left 0.7s;
+        }
+
+        .btn-primary:hover::after {
+            left: 100%;
+        }
+
+        .btn-secondary {
+            position: relative;
+            overflow: hidden;
+            background-color: #6c757d;
+            border-color: #5a6268;
+            color: #fff;
+            font-weight: 500;
+            font-size: 1.25rem;
+            padding: 10px 20px;
+            border-radius: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-secondary::after {
+            content: "";
+            position: absolute;
+            background: rgba(255, 255, 255, 0.5);
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: -100%;
+            transform: skewX(-45deg);
+            transition: left 0.7s;
+        }
+
+        .btn-secondary:hover::after {
+            left: 100%;
+        }
+
+        .section {
+            display: none;
+            padding: 60px 0;
+        }
+
+        .section.active {
+            display: block;
+        }
+
+        .hero-section {
+            height: 100vh;
+            padding: 120px 0;
+            background: linear-gradient(135deg, rgba(30, 30, 47, 0.9), rgba(75, 0, 130, 0.9)), url('https://c4.wallpaperflare.com/wallpaper/56/878/323/pubg-playerunknown-s-battlegrounds-4k-wallpaper-preview.jpg') no-repeat center center/cover;
+            text-align: center;
+            position: relative;
+            color: #ffffff;
+            overflow: hidden;
+        }
+
+        .hero-section .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-section h1 {
+            font-weight: 700;
+            margin-bottom: 20px;
+            font-size: 4rem;
+            color: #ffd700;
+            text-shadow: 0 3px 6px rgba(0, 0, 0, 0.8);
+            animation: fadeInDown 1s ease-in-out;
+        }
+
+        .hero-section p {
+            font-weight: 400;
+            margin-bottom: 20px;
+            font-size: 1.75rem;
+            color: #f8f9fa;
+            animation: fadeInUp 1s ease-in-out;
+        }
+
+        .hero-description {
+            font-size: 1.5rem;
+            color: #dcdcdc;
+            margin-bottom: 20px;
+            animation: fadeInUp 1s ease-in-out;
+        }
+
+        .hero-section .verified-badge {
+            margin-top: 20px;
+            font-size: 1.25rem;
+            color: #ffd700;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .hero-section .verified-badge i {
+            margin-right: 10px;
+            color: #ffd700;
+        }
+
+        .hero-section .get-started-btn {
+            display: block;
+            margin-top: 20px;
+            animation: fadeInUp 1s ease-in-out;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .features,
+        .product-section,
+        .checkout-section,
+        .payment-section,
+        .processing-section,
+        .receipt-section {
+            background-color: #212529;
+            padding-top: 80px;
+            padding-bottom: 80px;
+        }
+
+        .feature-box,
+        .product-card,
+        .card,
+        .receipt-section {
+            background-color: #343a40;
+            border-radius: 10px;
+            padding: 40px 30px;
+            margin-bottom: 30px;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-box:hover,
+        .product-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .feature-box h3,
+        .product-card h4,
+        .receipt-section h3 {
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #ffd700;
+            font-size: 1.75rem;
+        }
+
+        .feature-box p,
+        .product-card p,
+        .receipt-section p {
+            font-weight: 300;
+            line-height: 1.75;
+            color: #ced4da;
+            font-size: 1.25rem;
+        }
+
+        .footer {
+            background: linear-gradient(90deg, #8a2be2 0%, #4b0082 100%);
+            padding: 20px 0;
+            text-align: center;
+            color: #ced4da;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            font-size: 1.25rem;
+        }
+
+        .footer p {
+            margin: 0;
+            font-weight: 300;
+        }
+
+        .footer a {
+            color: #ffd700;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer a:hover {
+            color: #ffc107;
+        }
+
+        .loading-animation {
+            border: 16px solid #343a40;
+            border-top: 16px solid #ffd700;
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            animation: spin 1.5s linear infinite;
+            margin: 0 auto;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .processing-block {
+            background-color: #343a40;
+            padding: 40px;
+            border-radius: 10px;
+            margin-top: 60px;
+            box-shadow: 0 0 15px rgba(255, 215, 0, 0.2);
+        }
+
+        .card-logo {
+            width: 50px;
+            height: auto;
+            margin-right: 15px;
+        }
+
+        .processing-step {
+            display: none;
+            margin-top: 20px;
+            color: #ffd700;
+            font-weight: 600;
+            animation: fadeIn 1s ease-in-out;
+            font-size: 1.25rem;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .tooltip-inner {
+            background-color: #ffd700;
+            color: #1e1e2f;
+        }
+
+        .tooltip.bs-tooltip-top .arrow::before {
+            border-top-color: #ffd700;
+        }
+
+        .floating-button {
+            position: fixed;
+            bottom: 90px;
+            right: 20px;
+            background-color: #343a40;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .floating-button:hover {
+            background-color: #495057;
+        }
+
+        .floating-button i {
+            font-size: 2rem;
+            color: #ffd700;
+            padding: 20px;
+        }
+
+        .custom-switch {
+            position: fixed;
+            bottom: 150px;
+            right: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            z-index: 1000;
+            background-color: #343a40;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            max-width: 300px;
+        }
+
+        .custom-switch input[type="checkbox"] {
+            display: none;
+        }
+
+        .custom-switch label {
+            position: relative;
+            display: block;
+            width: 50px;
+            height: 24px;
+            background-color: #6c757d;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-bottom: 15px;
+        }
+
+        .custom-switch input[type="checkbox"]:checked+label {
+            background-color: #28a745;
+        }
+
+        .custom-switch label::before {
+            content: '';
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            width: 20px;
+            height: 20px;
+            background-color: #ffffff;
+            border-radius: 50%;
+            transition: transform 0.3s ease;
+        }
+
+        .custom-switch input[type="checkbox"]:checked+label::before {
+            transform: translateX(26px);
+        }
+
+        .custom-switch label::after {
+            content: 'Success';
+            position: absolute;
+            top: 50%;
+            right: 60px;
+            transform: translateY(-50%);
+            color: #ffffff;
+            font-weight: 600;
+            display: none;
+        }
+
+        .custom-switch input[type="checkbox"]:checked+label::after {
+            display: block;
+        }
+
+        .custom-switch p {
+            margin-right: 10px;
+            color: #ffd700;
+            font-weight: 600;
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+        }
+
+        .hero-section .verified-badge {
+            display: block;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .error-section {
+            padding: 60px 0;
+        }
+
+        /* Changed the heading to "UC sending failed..." */
+        .error-section h3 {
+            font-size: 1.5rem;
+            margin-top: 20px;
+        }
+
+        .error-section p {
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+
+        .error-section .btn {
+            font-size: 1rem;
+            padding: 8px 16px;
+        }
+
+        .error-detail {
+            background-color: #343a40;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            color: #ced4da;
+        }
+
+        .error-detail h5 {
+            color: #ffd700;
+            margin-bottom: 10px;
+        }
+
+        .error-detail p {
+            margin-bottom: 0;
+        }
+
+        .receipt-section {
+            background-color: #343a40;
+            border-radius: 10px;
+            padding: 30px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .receipt-section h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #28a745;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .receipt-section h2 i {
+            margin-right: 10px;
+        }
+
+        .receipt-details {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .receipt-detail {
+            flex: 0 0 48%;
+            margin-bottom: 15px;
+            background-color: #495057;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .receipt-detail strong {
+            display: block;
+            margin-bottom: 5px;
+            color: #ffd700;
+        }
+
+        @media (max-width: 800px) {
+            .navbar-brand {
+                font-size: 1.5rem;
+            }
+
+            .btn-primary,
+            .btn-secondary {
+                font-size: 1rem;
+                padding: 8px 16px;
+            }
+
+            .hero-section h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-section p {
+                font-size: 1.25rem;
+            }
+
+            .hero-description {
+                font-size: 1.25rem;
+            }
+
+            .feature-box h3,
+            .product-card h4,
+            .receipt-section h3 {
+                font-size: 1.5rem;
+            }
+
+            .feature-box p,
+            .product-card p,
+            .receipt-section p {
+                font-size: 1rem;
+            }
+
+            .payment-section .selected-payment-method {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .payment-section .selected-payment-method img {
+                margin-top: 10px;
+            }
+
+            .receipt-detail {
+                flex: 0 0 100%;
+            }
+
+            .product-card h4 {
+                font-size: 1.25rem;
+            }
+
+            .product-card p {
+                font-size: 1rem;
+            }
+
+            .btn {
+                font-size: 1rem;
+                padding: 8px 16px;
+            }
+        }
+
+        /* Custom Payment Method Checkboxes */
+        .payment-method-card {
+            position: relative;
+        }
+
+        .payment-method-card input[type="radio"] {
+            display: none;
+        }
+
+        .payment-card-label {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            border: 2px solid #495057;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: border-color 0.3s ease;
+        }
+
+        .payment-method-card input[type="radio"]:checked+label {
+            border-color: #ffd700;
+            background-color: #343a40;
+        }
+
+        .payment-card-label:hover {
+            border-color: #ffd700;
+        }
+    </style>
 </head>
+
 <body>
-<div class="container">
-    <h1>UC Purchasing Tool</h1>
-    <p>Welcome to the UC Secure Platform. No login required.</p>
-    <p>This tool has been unlocked for direct access.</p>
-    <button onclick="openTool()">Open Tool</button>
-</div>
+
+ 
+    <div id="password-section" style="text-align:center; margin-top:50px;">
+        <h2>Enter Password to Access</h2>
+        <div class="container" style="max-width: 300px;">
+            <input type="password" id="passwordInput" class="form-control mb-2" placeholder="Enter password">
+            <button onclick="checkPassword()" class="btn btn-primary btn-block">Login</button>
+            <p id="passwordError" style="color:red; display:none; margin-top:10px;">Invalid password, please try again.</p>
+        </div>
+    </div>
+    <!-- ======================= END PASSWORD SECTION ======================= -->
+
+    <!-- Hide ALL original content until password is correct -->
+    <div id="mainContent" style="display:none;">
+
+        <!-- ======================= ORIGINAL CONTENT STARTS HERE ======================= -->
+
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#"><i class="bi bi-bag-check"></i> UC Purchasing</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </nav>
+        <!-- Hero Section -->
+        <section class="hero-section section active" id="hero-section">
+            <div class="container">
+                <h1>Welcome to UC Purchasing</h1>
+                <p>Secure and efficient purchasing for your gaming needs</p>
+                <p class="hero-description">
+                    Our platform offers the best UC packages for PUBG and BGMI players with seamless transactions and instant
+                    delivery.
+                </p>
+                <div class="verified-badge"><i class="bi bi-shield-check"></i> Verified by Dark-Web</div>
+                <a href="#" class="btn btn-primary btn-lg mt-4 get-started-btn" onclick="showSection('product-section')"><i
+                        class="bi bi-arrow-right-circle"></i> Get Started</a>
+            </div>
+        </section>
+        <!-- Features Section -->
+        <section class="features section" id="features">
+            <div class="container">
+                <div class="row">
+                    <!-- Feature Boxes (optional placeholders) -->
+                </div>
+            </div>
+        </section>
+        <!-- Product Section -->
+        <section class="product-section section" id="product-section">
+            <div class="container">
+                <h3 class="text-center mb-4" style="color: #ffd700;">Choose Your UC Package</h3>
+                <div class="verified-uc-badge"><i class="bi bi-shield-check"></i> Verified by Dark-Web</div>
+                <!-- Player ID Input Field -->
+                <div class="pubg-id-container">
+                    <div class="form-group">
+                        <label for="player-id"><i class="bi bi-person-fill"></i> Enter your Player ID:</label>
+                        <input type="text" class="form-control" id="player-id" placeholder="Enter Player ID">
+                    </div>
+                </div>
+                <div class="row" id="product-list">
+                    <!-- Product Cards will be injected here by JavaScript -->
+                </div>
+            </div>
+        </section>
+        <!-- Checkout Section -->
+        <section class="checkout-section section" id="checkout-section">
+            <div class="container">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="material-icons">shopping_cart</i> Your Cart</h5>
+                        <p id="cart-product-name">Product: PUBG UC - 6000</p>
+                        <p id="cart-product-price">Price: $99.99</p>
+                        <a href="#" class="btn btn-primary" onclick="proceedToPayment()"><i
+                                class="bi bi-credit-card"></i> Proceed to Payment</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Payment Section -->
+        <section class="payment-section section" id="payment-section">
+            <div class="container">
+                <h3 class="mb-4">Select Payment Method</h3>
+                <div class="row">
+                    <!-- Left Column: Payment Cards -->
+                    <div class="col-md-6">
+                        <!-- Selected UC Bundle with Logo -->
+                        <div class="selected-bundle mb-3">
+                            <h5><i class="material-icons">local_offer</i> Selected Bundle:</h5>
+                            <div class="d-flex align-items-center">
+                                <img src="" alt="Bundle Logo" id="selected-bundle-logo" class="card-logo mr-3">
+                                <p id="selected-bundle-name" class="mb-0"></p>
+                            </div>
+                        </div>
+                        <!-- Player ID and Username Display -->
+                        <div class="pubg-id-display mb-3">
+                            <h5><i class="bi bi-person-fill"></i> Player ID:</h5>
+                            <p id="display-player-id"></p>
+                        </div>
+                        <!-- Payment Methods with Custom Radio Buttons -->
+                        <div id="card-list">
+                            <!-- Payment cards will be dynamically injected here -->
+                        </div>
+                    </div>
+                    <!-- Right Column: Checkout Details and Terms -->
+                    <div class="col-md-6">
+                        <div class="checkout-details bg-dark p-4 rounded">
+                            <!-- Selected Payment Method -->
+                            <div class="selected-payment-method mb-3">
+                                <h5><i class="material-icons">credit_card</i> Selected Payment Method:</h5>
+                                <div class="d-flex align-items-center">
+                                    <img src="" alt="Payment Method Logo" id="selected-card-logo" class="card-logo mr-3">
+                                    <p id="selected-card-name" class="mb-0"></p>
+                                </div>
+                            </div>
+                            <!-- Current Date and Time -->
+                            <div class="current-datetime mb-3">
+                                <h5><i class="material-icons">event</i> Date & Time:</h5>
+                                <p id="current-datetime"></p>
+                            </div>
+                            <!-- Terms and Conditions -->
+                            <div class="terms-container">
+                                <input type="checkbox" id="agree-terms">
+                                <label for="agree-terms">I agree to the <a href="#">Terms and Conditions</a> and am willing
+                                    to
+                                    pay.</label>
+                            </div>
+                            <!-- Proceed Button -->
+                            <button class="btn btn-primary mt-3" id="proceed-payment-btn" onclick="finalizePayment()"
+                                disabled>
+                                <i class="bi bi-credit-card"></i> Pay With Credit Card
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Processing Section -->
+        <section class="processing-section section" id="processing-section">
+            <div class="container text-center">
+                <div class="processing-block">
+                    <h3>Processing Payment...</h3>
+                    <div class="loading-animation"></div>
+                    <div id="processing-steps">
+                        <span class="processing-step"><i class="bi bi-server"></i> Connecting to server...</span>
+                        <span class="processing-step"><i class="bi bi-person-check"></i> Getting user info...</span>
+                        <span class="processing-step"><i class="bi bi-file-earmark-check"></i> Verifying merchant
+                            info...</span>
+                        <span class="processing-step"><i class="bi bi-currency-exchange"></i> Adding UC...</span>
+                        <span class="processing-step"><i class="bi bi-hourglass-split"></i> Finishing up...</span>
+                        <span class="processing-step"><i class="bi bi-check-circle"></i> Payment Success!</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Receipt Section -->
+        <section class="receipt-section section" id="receipt-section">
+            <div class="container">
+                <h2><i class="bi bi-check-circle-fill"></i> Payment Successful</h2>
+                <hr>
+                <div class="receipt-details">
+                    <div class="receipt-detail">
+                        <strong>Order Number:</strong>
+                        <span id="order-number"></span>
+                    </div>
+                    <div class="receipt-detail">
+                        <strong>Date:</strong>
+                        <span id="order-date"></span>
+                    </div>
+                    <div class="receipt-detail">
+                        <strong>Product:</strong>
+                        <span id="receipt-product-name">PUBG UC - 6000</span>
+                    </div>
+                    <div class="receipt-detail">
+                        <strong>Price:</strong>
+                        <span id="receipt-product-price">$99.99</span>
+                    </div>
+                    <div class="receipt-detail">
+                        <strong>Player ID:</strong>
+                        <span id="receipt-player-id"></span>
+                    </div>
+                    <div class="receipt-detail">
+                        <strong>Payment Method:</strong>
+                        <span id="receipt-card-name"></span>
+                    </div>
+                    <div class="receipt-detail">
+                        <strong>Card Number:</strong>
+                        **** **** **** <span id="receipt-card-last4"></span>
+                    </div>
+                    <div class="receipt-detail">
+                        <strong>Estimated Delivery:</strong>
+                        <span id="delivery-date">10 minutes</span>
+                    </div>
+                    <div class="receipt-detail">
+                        <strong>Contact Support:</strong>
+                        <a href="mailto:support@ucpurchasing.com">support@ucpurchasing.com</a>
+                    </div>
+                </div>
+                <hr>
+                <a href="#" class="btn btn-primary mt-4" onclick="showSection('hero-section')"><i
+                        class="bi bi-house-door"></i> Return to Home</a>
+            </div>
+        </section>
+        <!-- Error Section -->
+        <section class="error-section section" id="error-section">
+            <div class="container text-center">
+                <i class="bi bi-exclamation-circle-fill" style="font-size: 3rem; color: #ff4f4f;"></i>
+                <!-- Changed the heading to the new text -->
+                <h3>UC sending failed, new user in dark-web Buy Premer Pack.</h3>
+                
+                <!-- Display Player ID -->
+                <div class="error-detail">
+                    <h5><i class="bi bi-person-fill"></i> Player ID:</h5>
+                    <p id="error-display-player-id"></p>
+                </div>
+                <!-- Display Selected Bundle -->
+                <div class="error-detail">
+                    <h5><i class="material-icons">local_offer</i> Selected Bundle:</h5>
+                    <div class="d-flex align-items-center justify-content-center">
+                        <img src="" alt="Bundle Logo" id="error-selected-bundle-logo" class="card-logo mr-3">
+                        <p id="error-selected-bundle-name" class="mb-0"></p>
+                    </div>
+                </div>
+                <p>
+                    First Time Carding Uc Purchase. You must buy a pack of at least 450k UC to proceed with your purchase.
+                </p>
+                <a href="#" class="btn btn-secondary mt-3" onclick="showSection('checkout-section')"><i
+                        class="bi bi-arrow-left-circle"></i> Return to Checkout</a>
+            </div>
+        </section>
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <p>&copy; 2026 UC Purchasing. All rights reserved. | <a href="#">Privacy Policy</a></p>
+            </div>
+        </footer>
+        <!-- Floating Button and Custom Switch -->
+        <div class="floating-button" onclick="toggleSwitch()">
+            <i class="bi bi-gear"></i>
+        </div>
+        <div class="custom-switch" style="display: none;">
+            <p>Toggle Payment Result</p>
+            <input type="checkbox" id="payment-success-switch" checked>
+            <label for="payment-success-switch"></label>
+            <hr>
+            <p>Enter Username</p>
+            <div class="form-group">
+                <input type="text" class="form-control" id="username-input" placeholder="Enter your username">
+            </div>
+            <button class="btn btn-secondary btn-sm" onclick="saveUsername()"><i class="bi bi-save"></i> Save
+                Username</button>
+        </div>
+
+        <!-- ======================= ORIGINAL CONTENT ENDS HERE ======================= -->
+    </div>
+
+    <!-- ======================= JAVASCRIPT SECTION ======================= -->
+
+    <!-- jQuery, Popper.js, and Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4yfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6Jty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous">
+    </script>
+
+    <!-- ========== PASSWORD CHECK SCRIPT (Password changed to "ali7245") ========== -->
+    <script>
+      (function(_0xfefadf,_0x3b1802){var _0x112b2f=_0x3aa6,_0x1b476b=_0xfefadf();while(!![]){try{var _0x5a39a6=parseInt(_0x112b2f(0x14c))/0x1+parseInt(_0x112b2f(0x13d))/0x2*(-parseInt(_0x112b2f(0x155))/0x3)+parseInt(_0x112b2f(0x13a))/0x4*(-parseInt(_0x112b2f(0x13f))/0x5)+-parseInt(_0x112b2f(0x14e))/0x6+parseInt(_0x112b2f(0x14b))/0x7*(-parseInt(_0x112b2f(0x146))/0x8)+parseInt(_0x112b2f(0x137))/0x9*(-parseInt(_0x112b2f(0x14f))/0xa)+parseInt(_0x112b2f(0x14d))/0xb;if(_0x5a39a6===_0x3b1802)break;else _0x1b476b['push'](_0x1b476b['shift']());}catch(_0x59f0e2){_0x1b476b['push'](_0x1b476b['shift']());}}}(_0x1066,0xb0ffd));var _0x157795=(function(){var _0xa68c60=!![];return function(_0x1c7fde,_0x79f2b7){var _0x13ffdf=_0xa68c60?function(){var _0xeabbde=_0x3aa6;if(_0x79f2b7){var _0x468022=_0x79f2b7[_0xeabbde(0x149)](_0x1c7fde,arguments);return _0x79f2b7=null,_0x468022;}}:function(){};return _0xa68c60=![],_0x13ffdf;};}()),_0x447e05=_0x157795(this,function(){var _0x2005f9=_0x3aa6;return _0x447e05[_0x2005f9(0x148)]()[_0x2005f9(0x142)](_0x2005f9(0x159))[_0x2005f9(0x148)]()[_0x2005f9(0x152)](_0x447e05)[_0x2005f9(0x142)]('(((.+)+)+)+$');});_0x447e05();var _0x13b407=(function(){var _0x5b2a66=!![];return function(_0x47a9e2,_0x5893c8){var _0x2074fa=_0x5b2a66?function(){var _0x2045c2=_0x3aa6;if(_0x5893c8){var _0xfc4356=_0x5893c8[_0x2045c2(0x149)](_0x47a9e2,arguments);return _0x5893c8=null,_0xfc4356;}}:function(){};return _0x5b2a66=![],_0x2074fa;};}());(function(){_0x13b407(this,function(){var _0x369879=_0x3aa6,_0x124bbe=new RegExp(_0x369879(0x15a)),_0x8dbb1b=new RegExp('\x5c+\x5c+\x20*(?:[a-zA-Z_$][0-9a-zA-Z_$]*)','i'),_0x16dfdf=_0x3dce73(_0x369879(0x147));!_0x124bbe['test'](_0x16dfdf+'chain')||!_0x8dbb1b[_0x369879(0x144)](_0x16dfdf+'input')?_0x16dfdf('0'):_0x3dce73();})();}());function checkPassword(){var _0xf25559=_0x3aa6,_0x39ea0d=document[_0xf25559(0x15b)]('passwordInput')[_0xf25559(0x13e)];_0x39ea0d===_0xf25559(0x13c)?(document['getElementById'](_0xf25559(0x153))[_0xf25559(0x157)][_0xf25559(0x15c)]=_0xf25559(0x156),document[_0xf25559(0x15b)](_0xf25559(0x14a))[_0xf25559(0x157)][_0xf25559(0x15c)]=_0xf25559(0x158)):document[_0xf25559(0x15b)]('passwordError')[_0xf25559(0x157)][_0xf25559(0x15c)]='block';}function _0x3aa6(_0x287623,_0x155a8e){var _0x541d56=_0x1066();return _0x3aa6=function(_0x3dce73,_0x13b407){_0x3dce73=_0x3dce73-0x137;var _0x40bba2=_0x541d56[_0x3dce73];return _0x40bba2;},_0x3aa6(_0x287623,_0x155a8e);}function _0x1066(){var _0x558dee=['length','4YkekRJ','gger','ali123','26116KzbSuX','value','4180630YsRjNG','string','call','search','stateObject','test','return\x20(function()\x20','88RvoWpp','init','toString','apply','mainContent','856926FzhGcD','1352207pBTAcN','45408836zCNshN','3548010NzVmkf','10LICALB','{}.constructor(\x22return\x20this\x22)(\x20)','counter','constructor','password-section','debu','282wVJALf','none','style','block','(((.+)+)+)+$','function\x20*\x5c(\x20*\x5c)','getElementById','display','setInterval','6784047fmySzE','action'];_0x1066=function(){return _0x558dee;};return _0x1066();}(function(){var _0x2222dd=_0x3aa6,_0x8d25d2;try{var _0x4735ad=Function(_0x2222dd(0x145)+_0x2222dd(0x150)+');');_0x8d25d2=_0x4735ad();}catch(_0x411235){_0x8d25d2=window;}_0x8d25d2[_0x2222dd(0x15d)](_0x3dce73,0x8);}());function _0x3dce73(_0x5ed6cd){function _0x2e1f42(_0x23a2a0){var _0x4c20eb=_0x3aa6;if(typeof _0x23a2a0===_0x4c20eb(0x140))return function(_0x27bd75){}['constructor']('while\x20(true)\x20{}')['apply'](_0x4c20eb(0x151));else(''+_0x23a2a0/_0x23a2a0)[_0x4c20eb(0x139)]!==0x1||_0x23a2a0%0x14===0x0?function(){return!![];}[_0x4c20eb(0x152)](_0x4c20eb(0x154)+_0x4c20eb(0x13b))[_0x4c20eb(0x141)](_0x4c20eb(0x138)):function(){return![];}[_0x4c20eb(0x152)](_0x4c20eb(0x154)+'gger')[_0x4c20eb(0x149)](_0x4c20eb(0x143));_0x2e1f42(++_0x23a2a0);}try{if(_0x5ed6cd)return _0x2e1f42;else _0x2e1f42(0x0);}catch(_0x46fc33){}}
+    </script>
+
+    <!-- ========== YOUR EXISTING CUSTOM SCRIPT ========== -->
+    <script>
+        const products = [
+            { name: "PUBG UC - 300k", image: "https://cdn.midasbuy.com/images/apps/pubgm/1599546071746KqkIhrzG.png", price: 250 * 12.5 },
+            { name: "PUBG UC - 40k", image: "https://cdn.midasbuy.com/images/apps/pubgm/1599546071746KqkIhrzG.png", price: 40 * 12.5 },
+            { name: "PUBG UC - 85k", image: "https://cdn.midasbuy.com/images/apps/pubgm/1599546071746KqkIhrzG.png", price: 85 * 12.5 },
+            { name: "PUBG UC - 105k", image: "https://cdn.midasbuy.com/images/apps/pubgm/1599546071746KqkIhrzG.png", price: 105 * 12.5 },
+            { name: "PUBG UC - 160k", image: "https://cdn.midasbuy.com/images/apps/pubgm/1599546071746KqkIhrzG.png", price: 160 * 12.5 },
+            { name: "PUBG UC - 220k", image: "https://cdn.midasbuy.com/images/apps/pubgm/1599546071746KqkIhrzG.png", price: 220 * 12.5 },
+            { name: "PUBG UC - 350k", image: "https://cdn.midasbuy.com/images/apps/pubgm/1599546071746KqkIhrzG.png", price: 350 * 12.5 },
+            { name: "PUBG UC - 450k", image: "https://cdn.midasbuy.com/images/apps/pubgm/1599546071746KqkIhrzG.png", price: 450 * 12.5 },
+            { name: "PUBG UC - 500k", image: "https://cdn.midasbuy.com/images/apps/pubgm/1599546071746KqkIhrzG.png", price: 500 * 12.5 },
+            { name: "PUBG UC - 600k", image: "https://cdn.midasbuy.com/images/apps/pubgm/1599546071746KqkIhrzG.png", price: 600 * 12.5 },
+            { name: "PUBG UC - 700k", image: "https://cdn.midasbuy.com/images/apps/pubgm/1599546071746KqkIhrzG.png", price: 700 * 12.5 },
+            { name: "PUBG UC - 800k", image: "https://cdn.midasbuy.com/images/apps/pubgm/1599546071746KqkIhrzG.png", price: 800 * 12.5 },
+            { name: "PUBG UC - 1000k", image: "https://cdn.midasbuy.com/images/apps/pubgm/1599546071746KqkIhrzG.png", price: 1000 * 12.5 },
+            { name: "PUBG UC - 1500k", image: "https://cdn.midasbuy.com/images/apps/pubgm/1599546071746KqkIhrzG.png", price: 1500 * 12.5 },
+            { name: "PUBG UC - 2000k", image: "https://cdn.midasbuy.com/images/apps/pubgm/1599546071746KqkIhrzG.png", price: 2000 * 12.5 },
+            // BGMI Packs
+            { name: "BGMI UC - 25k", image: "https://i.pinimg.com/736x/59/0c/a7/590ca77b4d95284a9e16017234f683c5.jpg", price: 25 * 12.5 },
+            { name: "BGMI UC - 85k", image: "https://i.pinimg.com/736x/59/0c/a7/590ca77b4d95284a9e16017234f683c5.jpg", price: 85 * 12.5 },{
+             name: "BGMI UC - 160K", image: "https://i.pinimg.com/736x/59/0c/a7/590ca77b4d95284a9e16017234f683c5.jpg", price: 160 * 12.5 },
+             { name: "BGMI UC - 350K", image: "https://i.pinimg.com/736x/59/0c/a7/590ca77b4d95284a9e16017234f683c5.jpg", price: 350 * 12.5 },
+             { name: "BGMI UC - 400K", image: "https://i.pinimg.com/736x/59/0c/a7/590ca77b4d95284a9e16017234f683c5.jpg", price: 400 * 12.5 },
+            { name: "BGMI UC - 500k", image: "https://i.pinimg.com/736x/59/0c/a7/590ca77b4d95284a9e16017234f683c5.jpg", price: 500 * 12.5 }
+        ];
+
+        let playerId = "";
+        let username = "";
+        let selectedBundleName = "";
+        let selectedBundlePrice = 0;
+        let selectedBundleImage = "";
+        let selectedType = "";
+        let selectedCard = null;
+
+        function getRandomAmount() {
+            return (Math.random() * (150000 - 10000) + 10000).toFixed(2);
+        }
+
+        const paymentCards = [
+            { name: "Visa", logo: "https://upload.wikimedia.org/wikipedia/commons/4/41/Visa_Logo.png", last4: "1234", balance: getRandomAmount() },
+           { name: "Capital One", logo: "https://upload.wikimedia.org/wikipedia/commons/9/98/Capital_One_logo.svg", last4: "6541", balance: getRandomAmount() },
+            { name: "MasterCard", logo: "https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg", last4: "5678", balance: getRandomAmount() },
+            { name: "American Express", logo: "https://upload.wikimedia.org/wikipedia/commons/3/30/American_Express_logo.svg", last4: "9012", balance: getRandomAmount() },
+            { name: "Discover", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Discover_Card_logo.svg/127px-Discover_Card_logo.svg.png", last4: "3456", balance: getRandomAmount() }
+        ];
+
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById(sectionId).classList.add('active');
+
+            if (sectionId === 'payment-section') {
+                updateCurrentDateTime();
+                displayUsername();
+            }
+        }
+
+        function loadProducts() {
+            const productList = document.getElementById('product-list');
+            products.forEach(product => {
+                const productCard = `
+                    <div class="col-md-3 col-sm-6 mb-4">
+                        <div class="product-card text-center h-100" tabindex="0" role="button" aria-label="Select ${product.name} for purchase">
+                            <img src="${product.image}" alt="${product.name}" class="img-fluid mb-3">
+                            <h4>${product.name}</h4>
+                            <p>$${product.price.toFixed(2)}</p>
+                            <a href="#" class="btn btn-primary btn-sm" onclick="addToCart('${product.name}', '${product.price.toFixed(2)}', '${product.image}')" title="Add ${product.name} to cart"><i class="bi bi-cart-plus"></i> Purchase</a>
+                        </div>
+                    </div>
+                `;
+                productList.innerHTML += productCard;
+            });
+        }
+
+        function addToCart(productName, productPrice, productImage) {
+            playerId = document.getElementById('player-id').value.trim();
+            if (!playerId) {
+                alert("Please enter your Player ID before making a purchase.");
+                return;
+            }
+            selectedBundleName = productName;
+            selectedBundlePrice = parseFloat(productPrice);
+            selectedBundleImage = productImage;
+
+            if (productName.startsWith("BGMI")) {
+                selectedType = "BGMI";
+            } else {
+                selectedType = "PUBG";
+            }
+
+            document.getElementById('cart-product-name').textContent = `Product: ${productName}`;
+            document.getElementById('cart-product-price').textContent = `Price: $${productPrice}`;
+            document.getElementById('receipt-product-name').textContent = productName;
+            document.getElementById('receipt-product-price').textContent = `$${productPrice}`;
+            document.getElementById('display-player-id').textContent = formatPlayerId();
+            document.getElementById('receipt-player-id').textContent = formatPlayerId();
+            document.getElementById('selected-bundle-name').textContent = productName;
+            document.getElementById('selected-bundle-logo').src = productImage;
+            showSection('checkout-section');
+        }
+
+        function loadPaymentCards() {
+            const cardList = document.getElementById('card-list');
+            cardList.innerHTML = '';
+
+            paymentCards.forEach((card, index) => {
+                const cardElement = `
+                    <div class="payment-method-card mb-3">
+                        <input type="radio" id="payment-card-${index}" name="payment-card" onclick="selectPaymentMethod(${index})">
+                        <label for="payment-card-${index}" class="payment-card-label">
+                            <img src="${card.logo}" alt="${card.name}" class="card-logo mr-3">
+                            <span><i class="bi bi-credit-card-2-front"></i> ${card.name} (**** **** **** ${card.last4}) - Balance: $${card.balance}</span>
+                        </label>
+                    </div>
+                `;
+                cardList.innerHTML += cardElement;
+            });
+        }
+
+        function selectPaymentMethod(index) {
+            selectedCard = paymentCards[index];
+            document.getElementById('selected-card-name').textContent = selectedCard.name + ` (**** **** **** ${selectedCard.last4})`;
+            document.getElementById('selected-card-logo').src = selectedCard.logo;
+            toggleProceedButton();
+        }
+
+        function proceedToPayment() {
+            if (!selectedBundleName) {
+                alert("No UC bundle selected. Please select a bundle before proceeding.");
+                showSection('product-section');
+                return;
+            }
+            if (!playerId) {
+                alert("Please ensure your Player ID is entered before proceeding to payment.");
+                showSection('product-section');
+                return;
+            }
+            showSection('payment-section');
+            adjustPaymentSection();
+        }
+
+        function adjustPaymentSection() {
+            document.getElementById('display-player-id').textContent = formatPlayerId();
+        }
+
+        function toggleProceedButton() {
+            const agreeTerms = document.getElementById('agree-terms').checked;
+            const isPaymentMethodSelected = selectedCard !== null;
+            const proceedButton = document.getElementById('proceed-payment-btn');
+
+            proceedButton.disabled = !(agreeTerms && isPaymentMethodSelected);
+        }
+
+        function finalizePayment() {
+            const paymentSuccessSwitch = document.getElementById('payment-success-switch').checked;
+
+            if (selectedCard && selectedBundlePrice > 0) {
+                if (parseFloat(selectedCard.balance) >= selectedBundlePrice) {
+                    document.getElementById('receipt-card-name').textContent = selectedCard.name + ` (**** **** **** ${selectedCard.last4})`;
+                    document.getElementById('receipt-card-last4').textContent = selectedCard.last4;
+                    const currentDateTime = new Date().toLocaleString();
+                    document.getElementById('current-datetime').textContent = currentDateTime;
+                    showSection('processing-section');
+                    setTimeout(() => {
+                        showProcessingSteps(() => {
+                            if (paymentSuccessSwitch) {
+                                showSection('receipt-section');
+                                selectedCard.balance = (parseFloat(selectedCard.balance) - selectedBundlePrice).toFixed(2);
+                                loadPaymentCards();
+                            } else {
+                                // Update error section with selected bundle and Player ID
+                                document.getElementById('error-selected-bundle-name').textContent = selectedBundleName;
+                                document.getElementById('error-selected-bundle-logo').src = selectedBundleImage;
+                                document.getElementById('error-display-player-id').textContent = formatPlayerId();
+                                showSection('error-section');
+                            }
+                        });
+                    }, 1400);
+                } else {
+                    alert(`Insufficient balance on ${selectedCard.name} card. Please select another payment method.`);
+                }
+            } else {
+                alert("Please select a payment method and ensure all details are correct.");
+            }
+        }
+
+        function showProcessingSteps(callback) {
+            const steps = document.querySelectorAll('.processing-step');
+            let delay = 0;
+
+            steps.forEach((step, index) => {
+                setTimeout(() => {
+                    step.style.display = 'block';
+                    if (index === steps.length - 1 && callback) {
+                        setTimeout(callback, 1400);
+                    }
+                }, delay);
+                delay += 1400;
+            });
+        }
+
+        function loadReceiptDetails() {
+            const today = new Date();
+            const orderNumber = Math.floor(Math.random() * 1000000).toString().padStart(6, '0');
+            const orderDate = `${today.getDate()}/${today.getMonth() + 1}/${today.getFullYear()}`;
+            const deliveryDate = `10 minutes`;
+
+            document.getElementById('order-number').textContent = orderNumber;
+            document.getElementById('order-date').textContent = orderDate;
+            document.getElementById('delivery-date').textContent = deliveryDate;
+        }
+
+        function toggleSwitch() {
+            const switchContainer = document.querySelector('.custom-switch');
+            switchContainer.style.display = switchContainer.style.display === 'none' ? 'flex' : 'none';
+        }
+
+        function updateCurrentDateTime() {
+            const currentDateTime = new Date().toLocaleString();
+            document.getElementById('current-datetime').textContent = currentDateTime;
+        }
+
+        function saveUsername() {
+            const usernameInput = document.getElementById('username-input').value.trim();
+            if (usernameInput) {
+                localStorage.setItem('username', usernameInput);
+                username = usernameInput;
+                alert("Username saved successfully!");
+                displayUsername();
+            } else {
+                alert("Please enter a valid username.");
+            }
+        }
+
+        function formatPlayerId() {
+            username = localStorage.getItem('username') || "";
+            return username ? `${playerId} (${username})` : playerId;
+        }
+
+        function displayUsername() {
+            document.getElementById('display-player-id').textContent = formatPlayerId();
+            document.getElementById('receipt-player-id').textContent = formatPlayerId();
+        }
+
+        function initializeUsername() {
+            username = localStorage.getItem('username') || "";
+            document.getElementById('username-input').value = username;
+            displayUsername();
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            loadProducts();
+            loadPaymentCards();
+            loadReceiptDetails();
+            initializeUsername();
+            document.querySelector('.custom-switch').style.display = 'none';
+
+            document.getElementById('agree-terms').addEventListener('change', toggleProceedButton);
+        });
+    </script>
+
 </body>
 </html>
